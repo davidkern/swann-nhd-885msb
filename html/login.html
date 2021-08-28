@@ -1,0 +1,115 @@
+<div style="width:100%;">
+    <div class="login_main">
+        <div class="loginDiv" id="loginDiv">
+            <div class="language_box">
+                <div id="login_language"></div>
+            </div>
+            <div class="loginLogo" style="display: block;"></div>
+            <div class="enterBox" id="idLogin_InputDiv" style="display: block;">
+				<div class="login_typeBox" id="LoginTypeDiv" style="display: none;">
+					<p>What type of device are you logging into?</p>
+					<div>
+						<div onclick="ChangeLoginType(0)" style="cursor:pointer; width:100px;"><div class="loginRadio_on"></div><p> IP Camera</p></div>
+						<div onclick="ChangeLoginType(1)" style="cursor:pointer; width:100px;"><div class="loginRadio_off"></div><p> DVR/NVR</p></div>
+					</div>
+                </div>
+                <div class="login_box" id="LoginIPDiv" style="display: none;">
+                    <div class="spanImg" oriTop="96"></div>
+                    <select class="select loginIP_select_IEBao" onchange="InputIpadderss()" id="loginIP_select"></select>
+                    <input class="login_input loginIP_input_IEBao" id="loginIP" type="text" value="" placeholder="Device ID/IP"/>
+                </div>
+                <div class="login_box" id="LoginPortDiv" style="display: none;">
+                    <div class="spanImg" oriTop="64"></div>
+                    <input class="login_input" id="loginPort" type="text" value="" placeholder="Client Port" onblur="if(this.value=='')this.value='9000'"/>
+                </div>
+                <div class="login_box" id="uName">
+                    <div class="spanImg" oriTop="0"></div>
+                    <input class="login_input" id="userName" type="text" value="" placeholder="User Name"/>
+                </div>
+                <div class="login_box" id="pwd">
+                    <div class="spanImg" oriTop="32"></div>
+                    <input class="login_input" id="loginPsw" type="password" value="" placeholder="Password"/>
+                </div>
+
+				<div class="loginPswCkbox_div" id="loginPswCkbox_div">
+					<input type="checkbox" id="loginPswCkbox" />
+					<label for="loginPswCkbox" id="loginPswCkbox_lg">Remember password</label>
+				</div>
+				
+				<div class="LoginStatus" id="LoginStatus">
+					<div style="float:left;">&nbsp;</div>
+					<div id="Web_false"></div>
+				</div>
+				<div class="login_box" id="loginBtn" name="" onclick="Login(this.id)">Login</div>
+            </div>
+
+            <div class="enterBox" id="idLogin_ModifyPsw_div" style="display: none;">
+                <div class="form-group" id="modifyTitle">
+                    Modify Password
+                </div>
+                <div class="form-group" id="modifyInfo">
+                    Default password is unsecure,<br/>please change the password
+                </div>
+                <div class="form-group">
+                    <div class="control-label" id="loginMdf_newPsw">New Password</div>
+                    <div class="form-control">
+                        <input class="control-input" id="modifpasswd" type="password" maxlength="6"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label" id="loginMdf_newPsw2">Confirm Password</div>
+                    <div class="form-control">
+                        <input class="control-input" id="modifpasswd2" type="password" maxlength="6"/>
+                    </div>
+                </div>
+                <div class="form-group" id="btn-group">
+                    <div class="modify-btn" id="confirmBtn" onclick="fnModifyPsw()">OK</div>
+                    <div class="modify-btn" id="cancelBtn" onclick="ModifyCancel()">Cancel</div>
+                </div>
+                <div id="ModPswResult"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(function () {
+        $("body,#userName,#loginPsw").keydown(function (e) {
+            if (e.keyCode == 13) {
+                $(".loginBtn").click();
+            }
+        });
+
+        if (lgCls.langues.split(" ").length == 1) {
+            $('#login_language').addClass('none');
+        }
+
+        var color, defaultColor;
+        var skin = lgCls.skin;
+        var getColor = function (theme) {
+            if (theme == 'blue') {
+                color = '46cdff';
+                defaultColor = '8cc3f5';
+                return;
+            } else if (theme == 'black') {
+                color = '73b9dc';
+                defaultColor = '1e3b56';
+                return;
+            } else if (theme == 'white') {
+                color = '73b9dc';
+                defaultColor = 'e5e5e5';
+                return;
+            }else if(theme == 'golden') {
+                color = 'ff9900';
+                defaultColor = '544632';
+                return;
+            }
+        };
+        getColor(skin);
+        UI.Input("#LoginIPDiv", 32, "", color, defaultColor, 2);
+        UI.Input("#LoginPortDiv", 32, "", color, defaultColor, 2);
+        UI.Input("#uName", 32, "", color, defaultColor, 2);
+        UI.Input("#pwd", 32, "", color, defaultColor, 2);
+    })
+</script>
