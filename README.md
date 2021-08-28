@@ -12,3 +12,6 @@ But it seems to support RTSP (at least it has the port open).
 This is a dump from the web interface of the camera, so I can reverse
 engineer the dlls and figure out how to authenticate to the RTSP port.
 
+## RTSP Url
+
+rtsp://[ip]:554/ch1/00
