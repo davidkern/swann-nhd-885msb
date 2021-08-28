@@ -1,0 +1,59 @@
+ <div class="cfg_container" id="pathConfig_Main">
+      <div id="pathConfig_Sub">
+          <div class="cfg_row" id="configPath" style="display:none;">Local Settings</div>
+          <div id="pathConfig_Con">
+              <div class="cfg_row" style="line-height:normal;">
+                  <div class="cfg_row_left" id="recordFile" style="line-height:normal;" >Record Field</div>
+                  <div class="cfg_row_right con_path">
+                      <input id="Path_2" type="text" readonly/><div class="browserBtn" id="PathBtn_2"></div>
+                  </div>
+              </div>
+              
+              <div class="cfg_row" id="fileDownloadBg" style="line-height:normal;">
+                  <div class="cfg_row_left" id="fileDownload" style="line-height:normal;">Download Path</div>
+                  <div class="cfg_row_right con_path">
+                      <input id="Path_3" type="text" readonly/><div class="browserBtn" id="PathBtn_3"></div>
+                  </div>
+              </div>
+              
+              <div class="cfg_row" style="line-height:normal;">
+                  <div class="cfg_row_left" id="captureImg" style="line-height:normal;">Snapshot Path</div>
+                  <div class="cfg_row_right con_path">
+                      <input id="Path_1" type="text" readonly/><div class="browserBtn" id="PathBtn_1"></div>
+                  </div>
+              </div>
+              
+              <div class="cfg_row" id="recordSet" style="line-height:normal;">
+                  <div class="cfg_row_left" id="fileType" style="line-height:normal;">File type</div>
+                  <div class="cfg_row_right">
+                      <select id="Path_fileType">
+                            <option value="1">RF</option>
+                            <option value="2">AVI</option>
+                            <option value="4">MP4</option>
+                        </select>
+                        <div id="MacDisplay" style="display: none;">
+                            <label id="recordTime" style="display:inline-block;">Interval</label>
+                            <input id="minuteTime" onkeyup="if(keyboardFilter(event)) {value=NumberRangeLimt(this,1,60)}" style="display:inline-block;"/>&nbsp;&nbsp;
+                            <label id="minute" style="display:inline-block;">Minute</label>
+                        </div>
+                  </div>
+              </div>
+              
+              <div class="cfg_row" id="captureSet">
+                  <div class="cfg_row_left" id="fileType_capture">Capture Type</div>
+                  <div class="cfg_row_right">
+                      <select id="capture_fileType">
+                            <option value="0">BMP</option>
+                            <option value="1">PNG</option>
+                            <option value="2" selected="selected">JPG</option>
+                        </select>
+                  </div>
+              </div>
+              
+              <div class="cfg_row">
+                    <div id="pathSave" class="btn">Save</div>
+               </div>
+                
+          </div>
+      </div>
+</div>

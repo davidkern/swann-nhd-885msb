@@ -1,0 +1,991 @@
+/* CSS Document */
+/**************************Page Frames ****************
+    position:relative;
+
+    --cfg_container 
+        --cfg_row
+            --cfg_row_left     height:30px;
+            --cfg_row_right    height:30px;
+        --cfg_row
+            --btn_box 
+                --btn               
+ ***********************************************/
+/*Main container*/
+.cfg_container {
+    position: relative;
+    top: 0px;
+    left: 0px;
+	padding-left:50px;
+	padding-top:20px;
+	box-sizing:border-box;
+	width:100%;
+	height:100%;
+	overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*------------------row Style-----------------*/
+.cfg_row {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.cfg_row_inbox_L, .cfg_row_inbox_R {
+    display: inline-block;
+    vertical-align: top;
+    height: auto;
+}
+
+.cfg_row_line_L {
+    width: 260px;
+    height: 30px;
+}
+
+.cfg_row_line_L .cfg_row_box {
+    width: 130px;
+    height: 30px;
+    float: left;
+    margin: 0px;
+}
+
+.user_col {
+    display: inline-block;
+    width: 110px;
+    height: 25px;
+}
+
+.user_col1 {
+    width: 50px;
+}
+
+#ana_box1 {
+    margin-top: 20px;
+    height: 300px;
+}
+
+.intellBtn{
+	position: relative;
+	width:auto;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-weight: bold;
+}
+.intell_detection{height:50px; display:none;}
+.intell_detection .btn_box{margin-left:0px;}
+.intell_detection .intellBtn:first-child{margin-left:0px;}
+
+/*-----------------left row section------------------*/
+.cfg_row_left {
+    display: inline-block;
+    width: 160px;
+    height: 30px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+}
+
+#user_left {
+    width: 400px;
+}
+
+/*-----------------right row section------------------*/
+.cfg_row_right {
+    display: inline-block;
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+}
+
+#user_right {
+    width: 250px;
+}
+
+.rightEx{
+	width:500px;
+}/*16 Channel line width*/
+
+/*-----------------video area--------------------*/
+.videoDiv{
+	position: absolute;
+	top:20px;
+	left:900px;
+}
+
+.video_position {
+    width: 300px;
+    height: 250px;
+    position: absolute;
+}
+
+.videoDiv .btn_div{
+	position: absolute;
+	top:260px;
+	right:0px;
+	width:300px;
+}
+
+#Vidoeposition,#live_video,#Vidoeshelter,#Vidoecamera,#MotionSP,#VideoRoi,#PZ_Rect,#PL_Rect,#GLL_Rect,#mobi_video,
+#PD_Rect,#FD_Rect,#CC_Rect,#Pir_SP,#ID_Rect,#TMR_Rect,#HGI_Rect,#floodLightVideo{
+	top:0px;
+	right:0px;
+}
+
+/*---------------------button area----------------------------*/
+#ClearShelter,#roi_ClearBtn{margin-left:100px;}
+#ClearBtn,#ClearPZRect,#ClearPLRect,#ClearGLLRect,#ClearPDRect,#ClearFDRect,#ClearCCRect,#pir_ClearBtn,#ClearIDRect,
+#ClearTMRRect,#ClearHGIRect,#FlClearBtn
+{margin-left:50px;}
+/*------------------button container---------------------*/
+.btn_box {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 145px;
+    margin-bottom: 2px;
+}
+
+#ang_btn_box {
+    margin-left: 12px;
+}
+
+#sp_btn_box {
+    left: -162px;
+    top: 10px;
+}
+
+#RTSP_btn_box, #email_btn_box {
+    margin-left: -15px
+}
+
+/*------------------button style---------------------*/
+.btn {
+    height: 30px;
+    width: 85px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 30px;
+    font-size: 14px;
+    float: left;
+    border:0;
+}
+
+.copy_btn {
+    height: 30px;
+    width: 85px;
+    text-align: center;
+    display: inline-block;
+    line-height: 30px;
+    font-size: 14px;
+    float: left;
+    margin-right: 10px;
+}
+
+.autoWidth{width:auto; padding:0px 5px;}
+.btn.autoWidth{min-width:75px;}
+#IPCSet_Ok{margin-left:0;}
+#img_Btn_box,#main_btn,#sub_btn,#mob_btn,#main_btn_box,#mobi_btn_box,#sub_btn_box,#hdd_btn_box,.margLft{margin-left:-15px;}
+#mainstream_type_box,#mobstream_type_box,#substream_type_box,#fourstream_type_box {margin-bottom:10px;}
+
+/*------------------input control style-------------------*/
+.select {
+    width: 300px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+.inputTxt {
+    width: 300px;
+    height: 25px;
+	line-height:25px;
+    margin-top: 3px;
+}
+
+.XQinput{width:140px;}
+
+.mv_select {
+    width: 100px;
+}
+
+.cfg_container .datepicker {
+    border: 1px solid #23282d;
+}
+
+.dst_select {
+    width: 45px;
+}
+
+.select option {
+    padding: 2px;
+}
+
+.selectPC {
+    margin-left: 15px;
+    padding-left: 2px;
+    width: 300px;
+    height: 25px;
+	line-height:25px;
+    margin-top: 3px;
+}
+
+.halfTable {
+    padding-left: 2px;
+    width: 300px;
+    height: 25px;
+	line-height:25px;
+    margin-top: 3px;
+}
+
+
+.cfg_container .datepicker {
+    border: 1px solid #23282d;
+}
+
+#NVR_DefineXMaLiu,#NVR_mobUserDefineBitrate {
+    width: 297px;
+    height: 25px;
+}
+
+/*------------------IPCan_set-------------------*/
+.syspm_use_range_R_L {
+    width: 130px;
+    float: left;
+    padding-left: 5px;
+}
+
+#IPCUserName, #IPCUserPassword {
+    width: 115px;
+    float: left;
+}
+
+.table_R_L {
+    width: 150px;
+    float: left;
+    height: 30px;
+}
+
+.table_R_R {
+    width: 150px;
+    float: left;
+    height: 30px;
+}
+
+.table_R_L_stream {
+    width: 215px;
+    float: left;
+    height: 30px;
+}
+
+.table_R_R_stream {
+    width: 200px;
+    float: left;
+    height: 30px;
+}
+
+.tablePC {
+    width: 578px;
+    clear: both;
+    text-align: left;
+}
+
+.PRO_TEX{
+    position: relative;
+    margin-left: 0;
+    top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/*------------------analog_ch-------------------*/
+.cfg_row_div1, .cfg_row_div2, .cfg_row_div3 {
+    display: inline-block;
+    margin-right: 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.cfg_row_div1 {
+    width: 100px;
+}
+
+.cfg_row_div2 {
+    width: 200px;
+}
+
+.cfg_row_div3 {
+    width: 180px;
+}
+
+.cfg_row_div4 {
+    width: 265px;
+}
+
+.cfg_row_box {
+    display: inline-block;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.cfg_row_box select {
+    height: 24px;
+    width: 160px;
+    margin-top: 3px;
+}
+
+#anaCkAll1 {
+    margin-right: 10px;
+}
+/*-------------------net_email--------------------*/
+#EmEmailSwitch_Normal,#EmEmailSwitch_C0 {
+    float: left;
+}
+#email_ContextDiv, #email_ContextDiv .cfg_row_right, #email_ContextDiv .inputTxt{
+    height: 90px;
+}
+
+/*---------email_jh--capture_jh--record_jh--------*/
+#CapJh_ChCopy_cp, #CapJh_WeekCopy_cp, #rec_copyDay, #rec_copyCh, #email_copyDay, #email_copyCh {
+    margin-left: 2px;
+    float: left;
+}
+
+#emailJh_btn, #Recplan_btn, #CapJh_item {
+    margin-left: -14px;
+}
+
+#CapJh_html_div,
+#email_show_0,
+#smart_show_0,
+#intelliplan_show,
+#smart_show,
+#alarmsch_show,
+#ptzsch_show
+{
+    margin-left: -20px;
+}
+
+#capSch_show{
+    position:relative;
+    height:auto;
+    margin-left: -20px;
+}
+/*------------------------hdd---------------------*/
+#HDDlist{width:550px;}
+
+.hdd_inbox1 {
+    width: 100px;
+}
+
+.hdd_inbox2, .hdd_inbox3, .hdd_inbox4 {
+    width: 150px;
+}
+
+.hdd_inbox1, .hdd_inbox2, .hdd_inbox3, .hdd_inbox4 {
+    float: left;
+    height: 30px;
+}
+
+.format_pro {
+    width: 12px;
+    height: 24px;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    margin-top: 5px;
+}
+/*------------------------Img_Ctrl---------------------*/
+.sel_mv {
+    width: 100px;
+    float: left;
+    margin-top: 3px;
+}
+
+.table_R_content {
+    width: 330px;
+    height: 250px;
+    float: left;
+    margin: 0px 7px;
+}
+
+.table_L_content {
+    float: left;
+    clear: none;
+}
+
+.bottom {
+    clear: left;
+    margin-left: -58px;
+}
+
+.table_box {
+    float: left;
+    font-size: 14px;
+}
+
+.exwidth {
+    background: #000;
+}
+
+.img_css {
+    float: left;
+    margin-right: 10px;
+}
+
+.middle_box {
+    position: relative;
+    margin-left: 0;
+    left: -6px;
+}
+
+.cfg_video_ctrl {
+    height: 30px;
+    margin-right: 10px;
+    float: left;
+}
+
+/*---------------------system_user-----------------*/
+#user_info_divdisplay {
+    padding-top: 30px;
+}
+
+.user_data {
+    width: 100%;
+    height: 240px;
+}
+
+.user_getDataClass {
+    width: 430px;
+    height: 240px;
+    float: left;
+}
+
+.user_getDataClass ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
+}
+
+.user_getDataClass li {
+    height: 30px;
+    width: 25%;
+    float: left;
+    line-height: 30px;
+}
+
+.user_setDataClass {
+    width: 330px;
+    height: 240px;
+    float: left;
+    padding-left: 10px;
+}
+
+.user_right_L {
+    display: inline-block;
+    width: 130px;
+    height: 48px;
+    float: left;
+}
+
+.user_right_R {
+    display: inline-block;
+    width: 196px;
+    height: 48px;
+    float: left;
+}
+.user_setDataClass #strengthDiv, #strengthDiv .user_right_L, #strengthDiv .user_right_R{
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+}
+.user_right_R input {
+    width: 196px;
+    height: 28px;
+    margin-top: 14px;
+}
+
+.user_info_Set div{width:185px; height:30px; display:inline-block;}
+/*---------------------copy-----------------*/
+.copy_box {
+    margin-top:15px;
+}
+
+.copy_R {
+    float: left;
+}
+
+.copy_title {
+    height: 30px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/*---------------------syswh_sj-----------------
+#reboot_prompt ul li {
+    line-height: 30px;
+    font-style: normal;
+    list-style-position: inherit;
+    list-style-type: none;
+}
+
+#reboot_title {
+    width: 400px;
+    height: 30px;
+    border-bottom: none;
+}
+
+#reboot_content {
+    padding-top: 10px;
+    width: 400px;
+    height: 80px;
+    border-top: none;
+}
+
+#reboot_prompt em {
+    line-height: 30px;
+    font-style: normal;
+}
+
+#reboot_input {
+    width: 150px;
+}
+
+#btn_reboot_ok, #btn_reboot_cancle {
+    margin: 0 0 0 20px;
+    width: 70px;
+}
+
+#btn_reboot_ok {
+    margin-left: -35px;
+}
+
+#reboot_prompt {
+    position: absolute;
+    left: 35%;
+    width: 400px;
+    top: 35%;
+    z-index: 10002;
+    text-align: center;
+    display: none;
+}*/
+
+.update_bg {
+    border: none;
+    width: 400px;
+    height: 15px;
+    margin-top: 7px;
+    float: left;
+    /*margin-left: 98px;
+    _margin-left: 50px;*/
+}
+
+#txtFileName,#ipc_txtFileName,#platFileName{
+    float: left;
+    width: 280px;
+    height: 25px;
+}
+
+#aa {
+    margin-top: 2px;
+    overflow: hidden;
+    height: 10px;
+    width: 0px;
+    text-align: left;
+    border: none;
+}
+
+#RebootTootipText {
+    text-align: center;
+    font-size: 16px;
+}
+
+#updateWarming {
+    border: none;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.switch {
+    cursor: pointer;
+    margin-top: 6px;
+    width: 50px;
+    height: 18px;
+    border:0;
+    outline:0;
+}
+
+.state_off {
+    width:20px;
+    height:20px;
+    margin:auto;
+}
+
+.state_on {
+    width:20px;
+    height:20px;
+    margin:auto;
+}
+.img_edit,.img_editnet {
+     width:20px;
+     height:20px;
+     margin:auto;
+ }
+.img_add {
+     width:20px;
+     height:20px;
+     margin:auto;
+ }
+
+.img_del {
+    width:20px;
+    height:20px;
+    margin:auto;
+}
+
+/*---------------------alarm_mv-----------------*/
+.Vmv_btn_box {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.cfg_row_line_L .select{width:120px;}
+
+/*---------------------ip filter-----------------*/
+.ipfilercss{width:530px;}
+.IPFilter_range_1,.IPFilter_range_2,.IPFilter_range_3{float:left; height:30px; text-align:center;}
+.IPFilter_range_1{width:120px;}
+.IPFilter_range_2{width:286px}
+.IPFilter_range_3{width:120px}
+.IPFilter_select{
+    height:20px;
+    line-height:20px;
+    margin-left:3px;
+    margin-right:3px;
+    margin-top:3px;
+    width:180px;
+    text-align: center;
+}
+#IP_DIV{margin-left:-15px;}
+.IPFlist{width:530px;float:left;clear: both;}
+#IPFilterSwitch{width:370px;}
+/*---------------------dev_log-----------------*/
+#log_search, #logType {
+    float: left;
+}
+
+#log_list_title, #log_list {
+    text-align: center;
+}
+
+#log_scan_Btn, #log_export_btn{
+    float:none;
+    margin-left:10px;
+}
+
+.DevLogNum, 
+.DevLogCh, 
+.DevLogType, 
+.DevLogTime, 
+.DevLogOperate, 
+.DevLogRecord, 
+.DevLogInfo,
+.DevLogIPAddress {
+    float: left;
+    height: 30px;
+}
+
+.DevLogNum {width: 40px;}
+.DevLogCh {width: 80px;}
+.DevLogType {width: 150px;}
+.DevLogTime {width: 160px;}
+.DevLogOperate {width: 270px;}
+.DevLogRecord {width: 80px;}
+.DevLogInfo {width: 90px;}
+.DevLogIPAddress {width: 120px;}
+
+.DevLogInfoImg {
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
+    margin-left: 33px;
+}
+
+#pager {
+    width: 600px;
+    margin-top: 10px;
+}
+
+#pager ul {
+    float: right;
+    list-style: none;
+}
+
+#pager li {
+    float: left;
+    list-style: none;
+    margin: 2px;
+    padding: 0px 5px;
+    cursor: pointer;
+}
+
+#jumpPageBtn {
+	width:auto;
+	padding:0 5px;
+    min-width: 40px;
+    margin-left: 5px;
+    float: right;
+    line-height: 25px;
+    height:25px;
+}
+
+#jumpPageId {
+    width: 30px;
+    margin-left: 5px;
+    margin-top: 9px;
+    float: right;
+	text-align:center;
+}
+
+#totalNum {
+    margin-left: 5px;
+    margin-right: 5px;
+    float: right;
+}
+/*---------------------net_base-----------------*/
+
+.img_signal{
+   /* background: url("../images_black/signal0.png") no-repeat;*/
+    width:42px;
+     height:42px;
+     margin:auto;
+    /* margin-top:10px;*/
+}
+
+.NBCL_box{
+	position:absolute;
+	left:620px;
+	margin-top:20px;
+}
+#map_strategy_con .inputTxt{
+    float: left;
+    margin-right: 10px;
+}
+#map_strategy_con label{
+    float: left;
+}
+
+/*---------------------NormalClo_Sto-----------------
+#cloud_prompt li {
+    line-height: 30px;
+    font-style: normal;
+    list-style-position: inherit;
+    list-style-type: none;
+}
+
+#cloud_title {
+    width: 400px;
+    height: 30px;
+    border-bottom: none;
+}
+
+#cloud_content {
+    padding-top: 10px;
+    width: 400px;
+    height: 80px;
+    border-top: none;
+}
+
+#cloud_prompt em {
+    line-height: 30px;
+    font-style: normal;
+}
+
+#cloud_input {
+    width: 150px;
+}
+
+#btn_cloud_ok, #btn_cloud_ok2, #btn_cloud_cancle {
+    margin: 0 0 0 20px;
+    width: 70px;
+}
+
+#btn_cloud_ok {
+    margin-left: -35px;
+}
+
+#cloud_prompt {
+    position: absolute;
+    left: 35%;
+    width: 400px;
+    top: 35%;
+    z-index: 10002;
+    text-align: center;
+    display: none;
+}*/
+
+
+/*IPC Video plan*/
+#rdSmt_item,#smart_content,#smartSel,#smartRec_tag{width:800px;}
+#smart_show,#flood_show,#sdt_show{height:auto; position:relative;}
+#nvr_headTitle_div,
+#smt_headTitle_div,
+#flood_headTitle_div,
+#sdt_headTitle_div,
+#alarmsch_headTitle_div,
+#ptzsch_headTitle_div
+{
+	width:740px; 
+	overflow:hidden; 
+	height:20px;_height:23px;
+	margin-left:45px; 
+	display:none;
+}
+#Header_div,
+#smt_Header_div,
+#flood_Header_div,
+#sdt_Header_div,
+#alarmsch_Header_div,
+#ptzsch_Header_div
+{
+	width:740px; 
+	overflow:hidden; 
+	height:27px;_height:30px;
+	margin-left:56px;
+}
+#rec_tag,
+#smartRec_tag,
+#floodRec_tag,
+#sdtRec_tag,
+#alarmsch_tag
+{
+	height:27px; 
+	padding-left:20px; 
+	margin-left:20px; 
+	padding-top:20px;
+}
+.tagBox{float:left; width:auto;margin-left:50px;}
+.tagBox div{float:left;}
+.weekBox{width:785px; height:63px; margin-left:15px;}
+.weekBox .weekTxt{height:60px; width:40px;float:left; border-bottom:1px solid #ccc; border-right:1px solid #ccc; line-height:60px;}
+.weekBox .weekCon{height:60px; width:740px; float:left;}
+.weekCon .alarm_Bban{width:740px; overflow:hidden; height:21px;_height:30px;}
+#rec_normal_hint{background:rgb(0, 102, 0);}
+#rec_motion_hint{background:rgb(255, 255, 0);}
+#rec_alarm_hint{background:rgb(255, 0, 0);}
+#rec_smart_hint{background:rgb(0,170,255);}
+.divBox,.divBoxl,.divBoxr{width:30px; height:30px; clear:right; float:left; border-left:none; border-bottom:none;}
+.borderClass{height:20px; width:20px; float:left;background:transparent; border:1px solid #ccc;color:#ccc; margin-left:3px;}
+#rec_normal_hint{background:rgb(80,160,55);}
+#rec_motion_hint,#as_motion_hint{background:rgb(255, 210, 0);}
+#rec_alarm_hint,#as_alarm_hint{background:rgb(200,55,55);}
+#weekDataSmart .weekBox,
+#weekDataflood .weekBox,
+#sdt_weekData .weekBox,
+#alarmsch_weekData .weekBox,
+#ptzsch_weekData .weekBox
+{
+	height:21px;
+}
+#weekDataSmart .weekBox .weekTxt,
+#weekDataflood .weekBox .weekTxt,
+#sdt_weekData .weekBox .weekTxt,
+#alarmsch_weekData .weekBox .weekTxt,
+#ptzsch_weekData .weekBox .weekTxt
+{
+	height:20px; line-height:20px;
+}
+#weekDataSmart .weekBox .weekCon,
+#weekDataflood .weekBox .weekCon,
+#sdt_weekData .weekBox .weekCon,
+#alarmsch_weekData .weekBox .weekCon,
+#ptzsch_weekData .weekBox .weekCon
+{
+	height:20px;
+}
+.MaskDiv{position: absolute;left:0;top:0;display: none;z-index: 1000}
+#rec_pir_hint{background:rgb(158,51,255)}
+#rec_sound_hint{background:rgb(148,0,211)}
+
+/*ipc Intelligence analysis*/
+#smartInfo .table{width:850px; height:30px;}
+#smart_formTypeSel{float:left;}
+.coustData{width:870px;}
+.menuList{height:auto;}
+.boundaryCount{height:350px; overflow-y:scroll;}
+.halfPart{width:49%;height:30px; float:left; text-align:center; line-height:30px;}
+#coustGraphCon,#coustLineChartCon{position:relative; padding-top:20px;}
+.countTable{width:850px;height:30px;}
+.countTable .peopleNum{width:50px; height:30px; float:left; text-align:center;}
+.countTable .peopleNum div{width:45px; height:30px; line-height:30px; margin-top:-15px;text-align:center;}
+.countTable .time{width:799px; height:30px;float:left;}
+.listBorder{width:100%; height:5px;}
+#smart_scan_Btn, #smart_export_btn{float:none;}
+#smart_count .btn{width:auto; padding:0 5px;}
+.intellTitle div{display:inline-block;}
+.markData{float:right;padding-right:10px;}
+.markColor{width:10px;height:10px;margin-right:5px;}
+/*vml*/
+v\:group{behavior:url(#default#VML)}
+v\:rect{behavior:url(#default#VML)}
+v\:line{behavior:url(#default#VML)}
+v\:oval{behavior:url(#default#VML)}
+
+#Rtsp_AnonymousLoginSwitch, #IpEyeEnable{display:inline-block;}
+#Rtsp_AnonymousLogin_ex, #Rtsp_IpEyeEnable_ex, #img_wdrTxt{ vertical-align:top;}
+
+.IEEEXCss{float:left;width:100px;display:inline-block;}
+
+div.ButtonToDiv:hover{cursor:pointer;}
+
+#Zero_chn_seq table{
+	width: 270px;
+	height: 200px;
+	background: transparent;
+	text-align: center;
+}
+#Zero_chn_seq select{
+	width: 60px;
+}
+.seq_window1{
+	width: 100%;
+	height: 100%;
+}
+.seq_window2{
+	width: 50%;
+	height: 50%;
+}
+.seq_window3{
+	width: 33.33%;
+	height: 33.33%;
+}
+.seq_window4{
+	width: 25%;
+	height: 25%;
+}
+
+/***local path*****/
+.con_path input[type="text"] {
+    width: 260px;
+    height: 23px;
+    float: left;
+    padding-left: 10px;
+}
+
+.hddImgEx{
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#syswh_sjBg{
+    width: 900px;
+}

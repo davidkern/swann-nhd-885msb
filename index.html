@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache,no-store, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*"/>--><!--safari Open Web page Locally to release this comment-->
+    <title>Web Viewer</title>
+    <script type="text/javascript" src="js/LAB.min.js"></script>
+    <link href="css/RSUI.css" rel="stylesheet"/>
+	<link href="ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css" />
+    <link href="css/main.css" rel="stylesheet"/>
+    <script type="text/javascript" for="ipcocx" event="SendMsgToWeb(strMsg)">
+        SendMsgToWeb(strMsg);
+    </script>
+    <script type="text/javascript" for="timelineocx" event="SendMsgToWeb(strMsg)">
+        SendMsgToWeb(strMsg);
+    </script>
+
+    <script type="text/javascript">
+		$LAB.script("js/pluginVersion.js?version=" + (new Date).getTime())
+			.wait(function(){
+        			$LAB.script("js/jquery-1.11.1.min.js")
+                		.script("js/json.js?version=" + version_web)
+                		.wait(function () {	
+                			$LAB.script("js/jcookie.js?version=" + version_web)
+                            .script("js/language.js?version=" + version_web)
+                            .script("js/common.js?version=" + version_web)
+                            .script("js/class.js?version=" + version_web)
+                            .script("js/CProgress.js?version=" + version_web)
+                            .script("js/function.js?version=" + version_web)
+                            .script("js/RSUI.js?version="+version_web)
+							.script("js/divBox.js?version="+version_web)
+                            .script("js/plugin.js?version=" + version_web)
+                            .script("js/jquery.qrcode.min.js?version=" + version_web)
+							.script("ligerUI/js/ligerui.min.js?version=" + version_web)
+							.script("js/jquery.base64.js?version="+version_web)
+							.script("js/aes.js?version="+version_web)
+                            .wait(function () {
+                                $LAB.script("js/main.js?version=" + version_web)
+                            })	
+                		})
+			})
+    </script>
+</head>
+<body>
+	<iframe id="MsgPaop_box" title="Paop" frameborder="0" scrolling="no" style="display:none;"></iframe>
+	<iframe id="FtpUpgrade_box" frameborder="0" scrolling="no" style="display:none;"></iframe>
+    <iframe id="pbSoundLine" frameborder="0" scrolling="no" data-name=""></iframe>
+    <iframe id="playbackSpeed" frameborder="0" scrolling="no" data-name=""></iframe>
+    <iframe id="MaskLayout"></iframe>
+    <iframe id="MaskLayoutFirefox"></iframe>
+
+    <div class="header">
+    <!--Menu Section-->
+        <div class="headerMenu">
+            <div id="logo" class="logoImg"></div>
+            <div class="menuBg">
+                <div class="otherBg">
+                    <div id="logout" class="other"></div>
+                    <div id="help" class="other" title=""></div>
+                </div>
+                <div class="Menu">
+                    <div class="menuBox" id="setMenu" style="display: none;">
+                        <div id="setMenuBtn" class="menuBtn" data-name="">Setup</div>
+                    </div>
+                    <div class="menuBox" id="LiveMenu">
+                        <div id="liveBtn" class="menuBtn" data-name="active">Preview</div>
+                    </div>
+                    <div class="menuBox" id="PlayBackMenu">
+                        <div id="playbackBtn" class="menuBtn" data-name="">Playback</div>
+                    </div>
+                    <div class="menuBox" id="ConfigMenu">
+                        <div id="configBtn" class="menuBtn" data-name="">Remove Setting</div>
+                    </div>
+                    <div class="menuBox" id="PathMenu">
+                        <div id="pathConfigBtn" class="menuBtn" data-name="">PathConfig</div>
+                    </div>
+                    <div class="menuBox" id="logoutMenu" style="display: none;">
+                        <div id="logoutMenuBtn" class="menuBtn" data-name="">Logout</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menuMask"></div>
+    </div>
+    <div id="container" class="container">
+        <!--Login Page-->
+        <div id="login"></div>
+        <!--Tip download Page-->
+        <div id="webplugins"></div>
+        <!--Head-->
+    
+        <!--main section-->
+        <div class="main" id="main" style="position:relative;">
+            <iframe id="SetCam_box" title="Title" frameborder="0" scrolling="no" style="display:none;"></iframe>
+            <!--Main section content-->
+            <div class="mcontainer">
+                <div class="Page" id="live" data-name="notLoad"></div>
+                <div class="Page" id="playback" data-name="notLoad"></div>
+                <div class="Page" id="config" data-name="notLoad"></div>
+                <div class="Page" id="pathConfig" data-name="notLoad"></div>
+    
+                <!--Control part-->
+                <div class="mcmcmain" id="IndexObj" style="display: block;"></div>
+            </div>
+        </div>
+        <div id="mfoot" class="mfoot" style="display:none;height:35px;">
+            <div id="moreScreens" style="display: none;" data-name="">
+                <div class="divideMode" id="divide_1" data-ori="0 0" data-hover="45 0" data-mode=0></div>
+                <div class="divideMode" id="divide_4" data-ori="0 -32px" data-hover="45 32" data-mode=1></div>
+                <div class="divideMode" id="divide_6" data-ori="0 -64px" data-hover="45 64" data-mode=2></div>
+                <div class="divideMode" id="divide_8" data-ori="0 -96px" data-hover="45 96" data-mode=3></div>
+                <div class="divideMode" id="divide_9" data-ori="0 -128px" data-hover="45 128" data-name="active" data-mode=4></div>
+                <div class="divideMode" id="divide_10-1" data-ori="0 -160px" data-hover="45 160" data-mode=5></div>
+                <div class="divideMode" id="divide_10-2" data-ori="0 -192px" data-hover="45 192" data-mode=6></div>
+                <div class="divideMode" id="divide_12" data-ori="0 -224px" data-hover="45 224" data-mode=7></div>
+                <div class="divideMode" id="divide_13-1" data-ori="0 -256px" data-hover="45 256" data-mode=8></div>
+                <div class="divideMode" id="divide_13-2" data-ori="0 -288px" data-hover="45 288" data-mode=9></div>
+                <div class="divideMode" id="divide_14" data-ori="0 -320px" data-hover="45 320" data-mode=10></div>
+                <div class="divideMode" id="divide_16" data-ori="0 -352px" data-hover="45 352" data-mode=11></div>
+                <div class="divideMode" id="divide_25" data-ori="0 -384px" data-hover="45 384" data-mode=13></div>
+                <div class="divideMode" id="divide_36" data-ori="0 -416px" data-hover="45 416" data-mode=14></div>
+            </div>
+            <div id="liveSoundLineBox">
+                <div class="liveSmallImg sound-silence" id="liveSmallImg" data-silence="silence"></div>
+                <div id="liveSoundLine"></div>
+            </div>
+            <div id="dualtalkSoundLineBox">
+                <div class="dualtalkSmallImg sound-not-silence" id="dualtalkSmallImg" data-silence="silence"></div>
+                <div id="dualtalkSoundLine"></div>
+            </div>
+            <div id="liveLightBox">
+                <div class="sound-silence" id="liveFloodLightImg" data-silence="silence"></div>
+                <div id="liveFloodLight"></div>
+            </div>
+            <div id="audioAlarm_Box">
+                <div class="sound-silence" id="audioAlarm_BoxImg" data-silence="silence"></div>
+                <div id="audioAlarm_BoxSlider"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="popupBox" id="reboot_prompt" style="display:none;">
+      <ul>
+          <li class="popupBoxTitle" id="reboot_title"><em></em></li>
+       </ul>
+       <ul class="popupBoxContent"  id="reboot_content">
+            <li>
+              <input class="inputTxt" id ='reboot_input' type="password"/>
+            </li>
+            <li class="btn_box">
+              <input type="button" class="btn" id="btn_reboot_ok" value ='OK'/>
+              <input type="button" class="btn" id="btn_reboot_cancle" value ='Cancel'/>
+            </li>
+      </ul>
+    </div>
+    
+    <div class="popupBox" id="cloud_prompt" style="display:none;">
+        <ul class="popupBoxContent" id="cloud_content">
+            <li id="cloud_title"><em></em></li>
+            <li>
+                <input class="inputTxt" id ='cloud_input' type="password" style="display:none;"/>
+            </li>
+            <li class="btn_box">
+                <input type="button" class="btn" id="btn_cloud_ok" value ='OK'/>
+                <input type="button" class="btn" style="display:none;" id="btn_cloud_ok2" value ='OK'/>
+                <input type="button" class="btn" id="btn_cloud_cancle" value ='Cancle'/>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="popupBox" id="confirmDiv" style="display:none;">
+      <ul>
+          <li class="popupBoxTitle" id="confirm_title"><em></em></li>
+       </ul>
+       <ul class="popupBoxContent"  id="confirm_content">
+            <li>
+              <em class="inputTxt" id="confirm_str"></em>
+            </li>
+            <li class="btn_box">
+              <input type="button" class="btn" id="btn_confirm_ok" value ='OK'/>
+              <input type="button" class="btn" id="btn_confirm_cancle" value ='Cancel'/>
+            </li>
+      </ul>
+    </div>
+    
+    <div class="popupBox" id="user_prompt" style="display:none;">
+      <ul>
+          <li class="popupBoxTitle" id="user_title"><em></em></li>
+       </ul>
+       <ul class="popupBoxContent"  id="user_content">
+            <li>
+              <input class="inputTxt" id ='user_input' type="password"/>
+            </li>
+            <li class="btn_box">
+              <input type="button" class="btn" id="btn_user_ok" value ='OK'/>
+              <input type="button" class="btn" id="btn_user_cancle" value ='Cancel'/>
+            </li>
+      </ul>
+    </div>
+    
+    <div class="popupBox" id="login_user_prompt" style="display:none;">
+      <ul>
+          <li class="popupBoxTitle" id="login_user_title"><em></em></li>
+          <li id="loginTips" style="display: none;"></li>
+       </ul>
+       <ul class="popupBoxContent"  id="login_user_content">
+            <li id="login_userName">
+              <label id="login_userName_label"></label> : <input class="inputTxt" id ='login_userName_input' type="text" readonly="readonly" />
+            </li>
+           <li id="login_curPwd" style="display: none;">
+               <label id="login_curpwd_label"></label> : <input class="inputTxt" id ='login_curPwd_input' type="password"/>
+           </li>
+            <li>
+              <label id="login_user_label"></label> : <input class="inputTxt" id ='login_user_input' type="password"/>
+            </li>
+           <li id="strengthBar">
+               <div class="strengthBar_div">
+                   <div class="progress-bar_wrap" style="background-color: #bbb">
+                       <span class="progress-bar_item progress-bar_item-1"></span>
+                       <span class="progress-bar_item progress-bar_item-2"></span>
+                       <span class="progress-bar_item progress-bar_item-3"></span>
+                   </div>
+                   <span class="progress-bar_text">Low</span>
+               </div>
+           </li>
+            <li>
+              <label id="login_user_confirm_label"></label> : <input class="inputTxt" id ='login_user_input_confirm' type="password"/>
+            </li>
+            <li id="pwdTips" style="display: none;"></li>
+            <li class="btn_box">
+              <input type="button" class="btn" id="login_btn_user_ok" value ='OK'/>
+            </li>
+      </ul>
+    </div>
+    <div class="popupBox" id="foodlight_prompt" style="display:none;">
+      <ul>
+          <li class="popupBoxTitle" id="foodlight_title"><em>Attention</em></li>
+       </ul>
+       <ul class="popupBoxContent"  id="foodlight_content">
+            <li style="margin:10px;">
+              <label id="foodlight_label"></label>
+            </li>
+            <li></li>
+            <li class="btn_box" id="siren_div">
+              <input type="button" class="btn" id="siren_ok" value ='OK'/>
+              <input type="button" class="btn" id="siren_cancel" value ='Cancel'/>
+            </li>
+      </ul>
+    </div>
+    <div class="SecondaryContent" id="SecondaryContent" style="display: none">
+        <ul class="SecondTitle">
+            <li><h3 id="content_title"></h3><span class="second_close">&times;</span></li>
+        </ul>
+        <ul class="content_details" id="content_details">
+            <li class="content_container"></li>
+        </ul>
+    </div>
+    <div id="g_idALTEReport">
+        <div id="idALTE_title">Report</div>
+        <div id="idALTE_part2">Content</div>
+        <div id="idALTE_part3" style="display:none;">Update</div>
+    </div>
+</body>
+</html>

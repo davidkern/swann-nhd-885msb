@@ -1,0 +1,113 @@
+<div class="cfg_container" style="padding-top:5px;">
+
+    <div class="cfg_row">
+        <div class="cfg_row_left" id="EnableReport_lg">Report Enable</div>
+        <div class="cfg_row_right">
+            <input id="EnableReport" data="" class="switch" type="button" />
+        </div>
+    </div>
+	
+	<div class="cfg_row">
+        <div class="cfg_row_left" id="ReportIpAddr1_lg">Server IP</div>        
+        <div class="cfg_row_right">
+            <input id="ReportIpAddr1" class="inputTxt" maxlength="24" />
+        </div>
+    </div>
+	
+	<div class="cfg_row">
+        <div class="cfg_row_left" id="ReportIpAddr2_lg">Redundant Server IP</div>        
+        <div class="cfg_row_right">
+            <input id="ReportIpAddr2" class="inputTxt" maxlength="24" />
+        </div>
+    </div>
+	
+	<div class="cfg_row">
+        <div class="cfg_row_left" id="Port1_lg">Port</div>        
+        <div class="cfg_row_right">
+            <input id="Port1" class="inputTxt" maxlength="8" />
+        </div>
+    </div>
+	
+	<div class="cfg_row">
+        <div class="cfg_row_left" id="Port2_lg">Redundant Port</div>        
+        <div class="cfg_row_right">
+            <input id="Port2" class="inputTxt" maxlength="8" />
+        </div>
+    </div>
+	
+    <div class="cfg_row" style="margin-bottom:15px;">
+        <div class="cfg_row_left" id="ReportPeriod_lg">Report Period</div>
+        <div class="cfg_row_right">
+            <select class="select" id="ReportPeriod">
+                <option class="option" value="0">OFF</option>
+                <option class="option" value="1">1 Min</option>
+				<option class="option" value="2">2 Min</option>
+				<option class="option" value="3">5 Min</option>
+				<option class="option" value="4">10 Min</option>
+				<option class="option" value="5">30 Min</option>
+				<option class="option" value="6">1 Hour</option>
+				<option class="option" value="7">2 Hours</option>
+				<option class="option" value="8">6 Hours</option>
+				<option class="option" value="9">12 Hours</option>
+				<option class="option" value="10">1 Day</option>
+				<option class="option" value="11">2 Days</option>
+				<option class="option" value="12">7 Days</option>
+            </select>
+        </div>
+    </div>
+	
+	<style type="text/css">
+		.titleRow,
+		.oneRow{
+			width:470px;
+			height: 28px;
+		}
+		
+		.clsID{
+			width: 100px;
+		}
+		.clsType{
+			width: 200px;
+		}
+		.clsState{
+			width: 154px;
+		}
+		
+		.clsID,.clsType,.clsState{
+			float: left;
+			height: 26px;
+			line-height: 26px;
+			text-align: center;
+			border: 1px solid #ccc;
+		}
+		
+		.switch{
+			margin-top:4px;
+		}
+	</style>
+	
+	<div class="titleRow">
+		<div class="clsID">ID</div>
+		<div class="clsType">Report Type</div>
+		<div class="clsState">State</div>
+	</div>
+	<div id="idHtml_RowStl" style="display:none;">
+		<div class="oneRow">
+			<div class="clsID">00</div>
+			<div class="clsType">Online Status</div>
+			<div class="clsState">
+				<input data="" class="switch" type="button" />
+			</div>
+		</div>
+	</div>
+	<div id="idAllRows"></div>
+
+    <div class="cfg_row" style="margin-top:15px;">
+        <div class="btn_box" style="margin-top:20px; margin-left:60px;">
+            <button id="ALTE_RF" class="btn">Refresh</button>
+            <button id="ALTE_SV" class="btn SvBtnState">Save</button>
+			<button id="ALTE_Up" class="btn">Upgrade</button>
+            <button id="ALTE_Exit" class="btn">Exit</button>
+        </div>
+    </div>
+</div>

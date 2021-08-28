@@ -1,0 +1,82 @@
+ <div class="cfg_container" id="syswh_sjBg">
+     <div class="cfg_row" id="ipc_file_upgradeShow" style="display:none">
+        <div class="cfg_row_left" id="upgrade_file_IPC">IPC</div>
+        <div class="cfg_row_right">
+            <select id="upgrade_file_IPCSel" class="select"></select>
+        </div>
+    </div>
+    <div class="cfg_row">
+        <div class="cfg_row_left" id="upgrade_file_path">Upgrade File Path</div>
+        <div class="cfg_row_right" id="txtFileName_R">
+             <input type="text"  readonly="readonly" id="txtFileName" class="inputTxt"/>
+             <div class="btn" id="btnSj">SCAN</div>
+        </div>
+    </div>
+    
+    <div id="platUpdateDiv" style="display:none;">
+        <div class="cfg_row">
+            <div class="cfg_row_left" id="platUpdate_path">File Path</div>
+            <div class="cfg_row_right">
+                 <input type="text"  readonly="readonly" id="platFileName" class="inputTxt"/>
+                 <div class="btn" id="plat_scan">Scan</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cfg_row"></div>
+    
+    <div class="cfg_row" id="UPDATESTATE" style="display:none;">   
+        <div class="cfg_row_left" id="updateMsg_L"></div>
+        <div class="cfg_row_right" id="updateMsg_R" style="width:450px;">
+            <div class="update_bg">
+                <div id="aa"></div>
+            </div>
+            <label id="updateMsg" style="margin-left:5px;"></label>
+        </div>
+    </div>
+    
+    <div class="cfg_row" style="display:none; margin-top:5px;" id="RebootTootip">
+        <div class="cfg_row_left"></div>
+        <div id="RebootTootipText" class="cfg_row_right"></div>
+    </div>
+    <div class="cfg_row">
+        <div class="btn_box">
+            <div class="btn" id="UPStart">Upgrade start</div>
+            <div class="btn" id="UPStop" style="display:none;">Stop Upgrade</div>
+        </div>
+    </div>
+    
+    <div class="cfg_row"></div>
+    
+    <div id="SJ_IPC_Bg" style="display:none;">
+        <div class="cfg_row">
+            <div class="cfg_row_left" id="ipc_upgrade_file_path">IPC Upgrade File Path</div>
+            <div class="cfg_row_right" id="ipc_txtFileName_R">
+                 <input type="text" readonly id="ipc_txtFileName" class="inputTxt"/>
+                 <div class="btn" id="ipc_btnSj">Scan</div>
+            </div>
+        </div>
+        <div style="margin-left: 160px;height: 30px;margin-top: 20px;">
+            <input type="checkbox" id="WH_IPC"/>
+            <label id="SJ_AllIPCSel">All</label>
+        </div>
+        <div id="SJ_ipcNumCh" style="margin-left: 160px;"></div>
+        <div class="cfg_row">
+        	<div class="btn_box">
+        		<div id="SJ_IPC" class="btn">IPC Upgrade</div>
+            	<div class="btn" id="SJ_IPCStop" style="display:none;">Stop Upgrade</div>
+        	</div>
+        </div>
+    </div>
+    
+    <div class="cfg_row" id="platUpdateBtnDiv" style="display:none;">
+        <div class="btn_box">
+            <div class="btn" id="plat_start">Upload</div>
+        </div>
+    </div>
+    
+    <div class="cfg_row" id="WarmingBox">
+        <div class="cfg_row_left" id="syssj_warning_left"></div>
+        <div id="updateWarming" class="cfg_row_right"></div>
+    </div>
+</div>

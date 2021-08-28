@@ -1,0 +1,742 @@
+/* CSS Document */
+html, body {
+    height: 100%;
+    min-width: 1220px;
+    min-height: 768px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*Avant Garde sans-serif;Arial--->c61
+body,input,select,label,button,option{font-family: Avant Garde sans-serif;}*/
+/*Georgia, Arial, sans-serif;--->c123
+body,input,select,label,button,option{font-family: Georgia, Arial, sans-serif;}*/
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+#SetCam_box{
+	position:absolute; 
+	left:50%; 
+	top:50%; 
+	z-index:10000;
+	width:550px; 
+	height:350px;
+	margin-left:-275px;
+	margin-top:-175px;
+	overflow:hidden;
+}
+#MsgPaop_box{
+	position:fixed; 
+	left:2px; 
+	bottom:2px; 
+	z-index:10003;
+	width:240px; 
+	height:150px;
+	overflow:hidden; 
+}
+#FtpUpgrade_box{
+	position:fixed; 
+	left:2px; 
+	/*bottom:2px; */
+	z-index:10003;
+	width:240px; 
+	height:150px;
+	overflow:hidden; 
+}
+#pbSoundLine{
+	width: 200px; 
+	height: 30px;
+	position:absolute;
+	z-index: 99999;
+	left: 640px;
+	top: 634px;
+	border:none;
+	overflow:hidden; 
+	display: none;
+}
+#playbackSpeed{
+	width: 240px; 
+	height: 34px;
+	position:absolute;
+	z-index: 99999;
+	left: 670px;
+	top: 640px;
+	border:none;
+	overflow:hidden; 
+	display: none;
+}
+#MaskLayout{opacity:0.6;z-index: 10001;border:none;overflow:hidden;}
+#MaskLayoutFirefox{opacity:1;position: absolute;z-index: 10001;border:none;overflow:hidden;display: none;}
+
+#ipcocx {
+    width: 1px;
+    height: 1px;
+    z-index: 101;
+}
+
+.container {
+    float: left;
+    margin: 10px 60px 0;
+}
+
+.header {
+    height: 80px;
+    overflow: hidden;
+    background-color:rgb(15,18,20) ;
+	-moz-user-select:none;
+	display:none;
+}
+
+.headerMenu {
+    position: relative;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 0px;
+    float: right;
+    display: inline;
+}
+
+.logoImg {
+    height: 55px;
+    width: 190px;
+    margin-left: 60px;
+    margin-top:13px;
+    float: left;
+}
+
+.menuBg {
+    height: 45px;
+    float: right;
+    display: inline;
+}
+
+.otherBg {
+    height: 45px;
+    padding-top: 45px;
+    padding-left: 10px;
+    margin-right: 60px;
+    float: right;
+    display: inline;
+}
+
+.other {
+    height: 24px;
+    width: 24px;
+    float: right;
+    margin-right: 10px;
+    display: inline;
+}
+
+.Menu {
+    height: 45px;
+    width: auto;
+    float: right;
+    display: inline;
+}
+
+.main {
+    overflow: hidden;
+    height: 100%;
+}
+
+.mcontainer {
+    height: 100%;
+    width: 100%;
+}
+
+.menuBox {
+    height: 45px;
+    width: auto;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top:35px;
+    display: inline;
+}
+#menuMask{
+	position:relative;
+	top:0;
+	left:0;
+	height: 80px;
+    width: 100%;
+	background-color:transparent;
+}
+
+.menuBtn {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#login {
+    overflow: hidden;
+}
+
+#webplugins {
+    overflow: hidden;
+}
+
+/*calendar*/
+.datepicker {
+    border-collapse: separate;
+    width: 199px;
+    height: 175px;
+    z-index: 99;
+}
+
+.datepicker .controls {
+    height: 20px;
+    overflow: hidden;
+}
+
+.datepicker .controls th {
+    height: 20px;
+    font-size: 11px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.datepicker select {
+    font-size: 13px;
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+}
+
+.datepicker tr.days {
+    width: 199px;
+}
+
+.datepicker tr.days th {
+    height: 21px;
+    font-size: 10px;
+    text-align: center;
+    width: 27px;
+    overflow: hidden;
+    border: none;
+}
+
+.datepicker tfoot td {
+    height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.datepicker th, .datepicker tfoot td {
+    /*font: 10px Verdana, Arial, Helvetica, sans-serif;*/
+	font-size:10px;
+}
+
+.datepicker th span, .datepicker tfoot td span {
+    font-weight: bold;
+}
+
+.ToData {
+    height: 50px;
+    line-height: 50px;
+    top: 35px;
+    width: 80px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+}
+
+.ToDayS {
+    top: 88px;
+    width: 80px;
+    text-align: center;
+}
+
+.prevMonth {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
+
+.prevMonth:hover {
+    background-position: -18px 0;
+}
+
+.nextMonth {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+}
+
+.nextMonth:hover {
+    background-position: -18px -18px;
+}
+
+.datepicker tbody td {
+    /*font: 10px/13px Arial, Helvetica, sans-serif;*/
+	font-size:10px;
+    text-align: center;
+    overflow: hidden;
+
+    height: 21px;
+}
+
+.datepicker tbody td.date {
+    cursor: pointer;
+    width: 28px; /*22px*/
+    overflow: hidden;
+}
+
+.datepicker tbody td.date.chosen {
+    font-weight: bold;
+    width: 28px;
+}
+
+.datepicker tbody td.date.chosen2 {
+    font-weight: bold;
+    width: 28px; /*18px*/
+}
+
+.datepicker tbody td.date.chosen3 {
+    font-weight: bold;
+    width: 28px; /*18px*/
+}
+
+.selectMonth {
+    width: 18px;
+    overflow: hidden;
+    float: left;
+    margin-left: 6px;
+    margin-top: 2px;
+}
+
+.selectMonth_C0 {
+    width: 33px;
+    margin-left: 0;
+}
+
+.yearselect {
+    float: left;
+    width: 32px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.calendar_ctrl {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-size: 12px;
+    background: transparent;
+    -webkit-appearance:none;
+
+}
+
+.calendar_ctrl:hover {
+    cursor: pointer;
+}
+
+.CALMAXDAY{background: #262626;color:#fff;}
+
+/*timer*/
+.timer tr td div {
+    width: 20px;
+    overflow: hidden;
+}
+
+.timer tr td div select {
+	width:66px;
+    margin: -2px;
+	-webkit-appearance:none;
+}
+
+#MaskLayout {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10001;
+	opacity : 0.6;
+	filter:alpha(opacity=60);
+}
+
+#loading {
+    position: absolute;
+    left: 47%;
+    top: 40%;
+    width: 60px;
+    height: 60px;
+}
+
+#MsgPaop {
+    width: 240px;
+    height: 150px;
+    font-size: 12px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+#MsgSetCam{
+	width: 550px;
+    height: 350px;
+    font-size: 12px;
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.paopao_close {
+    margin-top: 13px;
+    margin-right: 13px;
+    width: 15px;
+    height: 15px;
+    float: right;
+}
+
+#Paoptitle {
+    width: 200px;
+    overflow: hidden;
+    padding-top: 10px;
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #e6ebf0;
+}
+
+/* drag bar change to click 1E232A*/
+.cursorCube {
+    border: none;
+    width: 1px;
+    height: 25px;
+    font-size: 0;
+    float: right;
+}
+
+ol {
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    height: 25px;
+}
+
+.selectEnable, .selectDisable {
+    width: 50px;
+    height: 18px;
+    margin-top: 6px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border:0;
+    outline:0;
+}
+
+/*confirm box*/
+.popupBox{
+    position: absolute;
+    left: 35%;
+    width: 400px;
+    top: 35%;
+    z-index: 10002;
+    text-align: center;
+    display: none;
+}
+.popupBox li {
+    line-height: 30px;
+    font-style: normal;
+    list-style-position: inherit;
+    list-style-type: none;
+}
+
+.popupBoxTitle {
+    width: 400px;
+    height: 30px;
+    border-bottom: none;
+}
+
+.popupBoxContent {
+    padding-top: 10px;
+    width: 400px;
+    height: 150px;
+    border-top: none;
+}
+
+.popupBox em {
+    line-height: 30px;
+    font-style: normal;
+}
+.popupBox .inputTxt{ width: 150px;}
+.popupBoxContent .btn{
+    margin: 0 0 0 20px;
+    width: 70px;
+    height:20px;
+    line-height: 20px;
+}
+.popupBoxContent .btn:first-child{
+    margin-left: -35px;
+}
+
+#login_user_content li{height:30px; text-align:left;}
+#login_user_content label{display:inline-block;width:150px;height:30px;line-height:30px; text-align:right;}
+#login_btn_user_ok{margin-left:170px;margin-top:10px;}
+
+#progress-bar{border: 1px solid #1e3b56;height: 120px;width: 100%;}
+
+/*.btn{font-family: Arial, Helvetica, sans-serif;}*/
+
+/*when only page for config, need streamBtn class*/
+.streamBtn {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+    font-weight: bold;
+}
+
+#SysDstSysTimerObj{float:left;height:25px; overflow:hidden;}
+#g_idALTEReport{display:none; width:600px; height:490px; margin:100px auto; padding:0px; border:1px solid #ccc; overflow-y:auto;}
+
+/*color box*/
+.colorSet{
+	position:relative;
+	height:30px;
+	width:30px;
+}
+.colorSel{
+position:absolute;
+top:0px;
+left:0px;
+width:20px;
+height:15px;
+background:#000;
+border:1px solid #ccc;
+}
+.colorSel:before{
+content:'';
+position:absolute;
+bottom:1px;
+right:1px;
+height:8px;
+width:8px;
+background:#ccc;
+}
+.colorSel:after{
+content:'';
+position:absolute;
+bottom:0px;
+right:2px;
+height:0px;
+width:0px;
+border:3px solid #000;
+border-color:#000 transparent transparent transparent;
+}
+.colorContent{
+position:absolute;
+top:15px;
+left:0px;
+width:200px;
+height:150px;
+background:#666;
+border:1px solid #ccc;
+padding:10px 0px 10px 10px;
+display:none;
+z-index:9999;
+}
+.colorPlate{
+width:165px;
+height:120px;
+display:inline-block;
+}
+.colorPlateSelect{
+width:35px;
+height:120px;
+display:inline-block;
+position:relative;
+}
+.colorPlateSelect .colorPoint{
+height:0px;
+width:0px;
+border:6px solid #000;
+border-color:transparent #000 transparent transparent;
+position:absolute;
+right:10px;
+top:50px;
+}
+.colorPlateVal{
+width:200px;
+height:30px;
+margin:0px;
+padding:0px;
+}
+.colorPlateVal .colorShow{
+width:50px;
+height:30px;
+background:#f0f;
+float:left;
+}
+.colorPlateVal .colorText{
+float:left;
+width:140px;
+height:30px;
+line-height:30px;
+text-align:left;
+padding-left:10px;
+}
+.colorPlateVal .colorText label, .colorPlateVal .colorText input{
+display:inline-block;
+}
+.colorPlateVal .colorText input{
+width:120px;
+height:25px;
+line-height:25px;
+margin:0px;
+border:none;
+}
+
+/*****local set******/
+.browserBtn{
+    width: 25px;
+    height: 23px;
+    float: left;
+    margin-left: 0;
+    border-left: 0;
+	cursor: pointer;
+}
+#MacDisplay {
+    float: left;
+    height: 22px;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+#MacDisplay #recordTime {
+    text-align: right;
+    width: 100px;
+}
+
+#MacDisplay > input {
+    width: 50px;
+    height: 16px;
+    text-align: center;
+	border-style:solid;
+	border-width:1px;
+}
+
+#pathSave {
+    height: 30px;
+	width:auto;
+	float:left;
+    cursor: pointer;
+    line-height: 30px;
+	margin-left:180px;
+	margin-top:10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+}
+#Path_fileType ,#capture_fileType{float:left;margin-top:5px;}
+
+
+#login_user_content #strengthBar{
+    height: 16px;
+    display: none;
+}
+#login_user_content .strengthBar_div{
+    position: relative;
+    left: 162px;
+    top: -10px
+}
+.strengthBar_div{width: 210px;}
+.progress-bar_wrap{
+    width: 148px;
+    height: 5px;
+    background-color: #262d33;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.progress-bar_item{
+    display: inline-block;
+    height: 100%;
+    width: 48px;
+    float: left;
+    visibility: hidden;
+}
+.progress-bar_item.active{
+    visibility: visible;
+}
+.progress-bar_item-1.active {
+    background-color: #FF4B47;
+}
+.progress-bar_item-2.active{
+    background-color: #F9AE35;
+    margin-left: 2px;
+}
+.progress-bar_item-3.active{
+    background-color: #2DAF7D;
+    margin-left: 2px;
+}
+.progress-bar_wrap .progress-bar_text{
+    display: inline-block;
+    color: #aaa;
+    margin-left: 5px;
+}
+
+#SecondaryContent{
+    width: 630px;
+    height: 320px;
+    left: 30%;
+    top: 28%;
+    position: absolute;
+    z-index: 10002;
+}
+.delCon{
+    width: 400px !important;
+    height: 200px !important;
+    left: 50% !important;
+    top: 50% !important;
+    margin-left: -200px !important;
+    margin-top: -100px !important;
+}
+.delCon .content_details{
+    width: 100% !important;
+    text-align: center !important;
+}
+.delCon .btn_box{
+    margin-left: 100px !important;
+    margin-top:50px !important;
+}
+#SecondaryContent .SecondTitle{
+    height: 38px;
+    line-height: 38px;
+    width:100%;
+    background-color: #1e3b56;
+    text-align: center;
+}
+.SecondTitle li{
+    text-align: center;
+}
+.SecondTitle .second_close{
+    display: inline-block;
+    width:16px;
+    height:16px;
+    line-height:16px;
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    font-size: 32px;
+    cursor: pointer;
+}
+.content_details{
+    width: 540px;
+    margin: 10px auto;
+}
